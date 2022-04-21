@@ -10,6 +10,6 @@ readme = "README.md"
 
 repository = "https://github.com/y86-dev/unsafe-alias-cell"
 keywords = ["primitive", "unsafe", "aliasing", "mutability", "no-std"]
-categories = ["no-std", "rust-patterns", "Accessibility"]
+categories = ["no-std", "rust-patterns", "accessibility"]
 
 [dependencies]
