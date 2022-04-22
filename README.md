@@ -60,7 +60,8 @@ required to be contained in only [`!Unpin`] types.
 
 [stdlib]: https://doc.rust-lang.org/std/cell/struct.UnsafeCell.html
 [`.get()`]: UnsafeAliasCell::get
-[`!Unpin`]: Unpin
+[`!Unpin`]: https://doc.rust-lang.org/std/marker/trait.Unpin.html
+[`Unpin`]: https://doc.rust-lang.org/std/marker/trait.Unpin.html
 [LLVM]: https://llvm.org/
 [`UnsafeAliasCell<T>`]: https://docs.rs/unsafe-alias-cell/latest/unsafe_alias_cell/struct.UnsafeAliasCell.html
 [`UnsafeCell<T>`]: https://doc.rust-lang.org/std/cell/struct.UnsafeCell.html
