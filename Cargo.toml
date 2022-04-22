@@ -8,6 +8,7 @@ license = "MIT OR Apache-2.0"
 description = "Primitive for aliasing mutability"
 readme = "README.md"
 
+documentation = "https://docs.rs/unsafe-alias-cell"
 repository = "https://github.com/y86-dev/unsafe-alias-cell"
 keywords = ["primitive", "unsafe", "aliasing", "mutability", "no-std"]
 categories = ["no-std", "rust-patterns", "accessibility"]
