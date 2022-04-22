@@ -54,9 +54,11 @@ that reference expires.
 accesses (or use atomics).
 
 ## How does it work?
-Under the current rules, all types that are [`!Unpin`] do not emit `noalias` for `&T` and `&mut T`
-in [LLVM] and are thus able to alias. For [`UnsafeAliasCell<T>`] to be sound, it is therefore
-required to be contained in only [`!Unpin`] types.
+Under the current rules, all types that are [`!Unpin`] are allowed to be aliased. So for
+[`UnsafeAliasCell<T>`] to be sound, it is therefore required to be contained in only [`!Unpin`] types.
+
+[`UnsafeAliasCell<T>`] is made up of [`UnsafeCell<T>`] and [`PhantomPinned`] to enable both interior
+mutability and allow aliasing.
 
 [stdlib]: https://doc.rust-lang.org/std/cell/struct.UnsafeCell.html
 [`.get()`]: UnsafeAliasCell::get
@@ -67,3 +69,4 @@ required to be contained in only [`!Unpin`] types.
 [`UnsafeCell<T>`]: https://doc.rust-lang.org/std/cell/struct.UnsafeCell.html
 [`UnsafeAliasCell<U>`]: https://docs.rs/unsafe-alias-cell/latest/unsafe_alias_cell/struct.UnsafeAliasCell.html
 [`UnsafeCell<U>`]: https://doc.rust-lang.org/std/cell/struct.UnsafeCell.html
+[`PhantomPinned`]: https://doc.rust-lang.org/std/marker/struct.PhantomPinned.html
